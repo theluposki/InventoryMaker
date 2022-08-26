@@ -1,0 +1,113 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white: #f2f2f2;
+  --dark: #3e3e40;
+  --primary: #d94a56;
+}
+
+html,
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+  Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+  sans-serif;
+  background: var(--white);
+  color: var(--dark);
+  width: 100%;
+  height: 100vh;
+}
+
+#app {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  padding: 62px 0;
+
+  overflow: hidden;
+  /* background: var(--primary); */
+}
+
+.title-center {
+  text-align: center;
+  color: var(--primary);
+  font-size: 1.5rem;
+}
+
+/* >> HeaderMobile  */
+.header-mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 60px;
+  background: var(--white);
+  box-shadow: 0 0 3px var(--dark);
+  border-radius: 0 0 6px 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* << HeaderMobile  */
+
+ /* >> Main */
+ .main {
+   width: 100%;
+   height: 100%;
+   padding: 5px;
+ }
+ /* << Main */
+
+
+ /* >> NavMobile */
+.nav-mobile {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  min-height: 60px;
+  background: var(--white);
+
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  gap: 20px;
+  justify-content:  stretch;
+  box-shadow: 0 0 3px var(--dark);
+  border-radius: 6px 6px 0 0;
+}
+
+.nav-mobile__nav-link {
+  text-decoration: none;
+  color: var(--dark);
+  background-color: transparent;
+  padding: 8px 10px;
+  border-radius: 3px;
+}
+
+.nav-mobile__nav-link:active {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.nav-mobile__nav-link i {
+  font-size: 33px;
+}
+
+.nav-mobile__nav-link span {
+  display: none;
+}
+
+.nav-mobile__active-link {
+  transition: all ease .4s;
+  color: var(--primary);
+  box-shadow: inset 0 0 6px var(--primary);
+}
+
+  /* << NavMobile */
